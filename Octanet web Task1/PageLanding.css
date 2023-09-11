@@ -1,0 +1,85 @@
+body, h1, h2, p {
+
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #98d8ed;
+
+}
+
+header {
+    background-color: #519cb5;
+    color: #141414;
+    text-align: center;
+    padding: 60px ;
+    font-size: 20px;
+}
+
+header {
+    background-color: #519cb5;
+    color: rgb(15, 14, 14);
+    text-align: center;
+    padding: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShXpuV0YXIpEMJFwZrN3Vfxdi3Wa_a0GyzVDVoDwNln1W5Fv-aH6MjjDoPSD6Og2gS6Og&usqp=CAU '); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+        background-size: cover; /* Adjust the background size as needed */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+      
+    
+}
+.feature {
+    
+    flex: 1;
+    background-color: #82a5b4;
+    border: 1px solid #090909;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.feature h2 {
+    font-size: 20px;
+}
+
+.cta {
+    background-color: #519cb5;
+    color: #121111;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.cta h2 {
+    font-size: 36px;
+}
+
+.cta p {
+    font-size: 18px;
+}
+
+button {
+    background-color: #ff8000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
