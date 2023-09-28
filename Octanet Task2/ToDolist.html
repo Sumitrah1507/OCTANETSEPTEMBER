@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="border: #060606;">To-Do List</title>
+   
+   
+</head>
+<style>
+
+     /* Add your CSS styling here */
+
+    .task {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #060606;
+    background-color: rgba(11, 181, 224, 0.952); ;
+}
+</style>
+<body style="background-color: rgba(11, 181, 224, 0.952);"> 
+    
+    <h1 style="text-align: center; border: darkblue;" >List of Tasks</h1>
+    
+    <div>
+        <h2>Add a Task</h2>
+        <input type="text" id="task" placeholder="Task name">
+        <input type="date" id="deadline">
+        <select id="priority">
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <div>
+        <h2>Task List</h2>
+        <ol id="taskList"></ol>
+    </div>
+    <script>
+        // JavaScript code to handle task addition
+        
+        function addTask() {
+            const taskName = document.getElementById('task').value;
+            const deadline = document.getElementById('deadline').value;
+            const priority = document.getElementById('priority').value;
+
+            if (deadline.trim() === '') {
+                alert('Please add deadline to your task');
+                return;
+            }
+            if (taskName.trim() === '') {
+                alert('Task name cannot be empty');
+                return;
+            }
+
+            const taskList = document.getElementById('taskList');
+            const taskItem = document.createElement('li');
+            taskItem.className = 'task';
+            taskItem.innerHTML = `<strong>Task:</strong> ${taskName}<br><strong>Deadline:</strong> ${deadline}<br><strong>Priority:</strong> ${priority}`;
+            
+            // Add a "Remove" button to the task item
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = function() {
+                taskList.removeChild(taskItem);
+            };
+
+            taskItem.appendChild(removeButton);
+            taskList.appendChild(taskItem);
+
+            // Clear input fields
+            document.getElementById('task').value = '';
+            document.getElementById('deadline').value = '';
+            document.getElementById('priority').value = 'low';
+        }
+    </script>
+    
+</body>
+</html>
